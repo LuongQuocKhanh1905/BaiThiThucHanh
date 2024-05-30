@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SOTIETKIEM</title>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="nav-heading">
+                Thông so tiet kiem
+            </div>
+            <div class="nav-body">
+                <form method="post">
+                    <div class="form-group">
+                        <label>MA SO:</label>
+                        <input type="number" name="index" id="index" value="" hidden="true">
+                        <input class="form-control" type="text" name="maso" required id="maso" placeholder="Nhập ma so">
+                    </div>
+                    <div class="form-group">
+                        <label>LOAI TIET KIEM:</label>
+                        <input class="form-control" type="text" name="loaitk" required id="loaitk" placeholder="Nhập loai tiet kiem">
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>HO TEN KHACH HANG:</label>
+                        <input class="form-control" type="text" name="name" required id="name" placeholder="Nhập ten khach hang"  >
+                    </div>
+                    <div class="form-group">
+                        <label>CHUNG MINH NHAN DAN:</label>
+                        <input class="form-control" type="number" name="quantity" required id="cmnd" placeholder="Nhập chung minh nhan dan"  >
+                    </div>
+                    <div class="form-group">
+                        <label>NGAY MO SO:</label>
+                        <input class="form-control" type="date" name="quantity" required id="date"   >
+                    </div><div class="form-group">
+                        <label>SO TIEN GUI:</label>
+                        <input class="form-control" type="number" name="quantity" required id="money" placeholder="Nhập so tien gui"  >
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success" type="button" onclick="addtt()">Thêm thong tin</button>
+                        <button class="btn btn-danger" type="reset">Làm mới</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="subnav">
+            <div class="nav-heading">
+                Danh sách tiet kiem
+            </div>
+            <div class="nav-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>MA SO</th>
+                            <th>LOAI TIET KIEM</th>
+                            <th>HO TEN KHACH HANG</th>
+                            <th>CHUNG MINH NHAN DAN</th>
+                            <th>NGAY MO SO</th>
+                            <th>SO TIEN GUI</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="result">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
